@@ -6,27 +6,60 @@
 </head>
 <body>
 	<script type="text/javascript">
-		var b = "one";
-		var c = `i have ${b} apple`; 
-		//console.log(s);
-		//a = "apple";
-
-		/*var status = confirm("запросить у пользователя информацию?");
-
-		if(status == true){
-			var e = prompt("введите число");
-			console.log("вы выбрали "+e+" число яблок");
+		var n = [];
+		//проверяет равенство элемента нулю, после того, как пользователь ввел ноль, заносит все эл-ты в массив
+		/*for(;true;){
+			var i = Number(prompt());
+			if(i == 0){
+				break;
+			}
+			else{
+				//n[n.length] = i;
+				n.push(i);
+			}
+		}
+		//выводит эл-ты массива по порядку
+		for(var j = 0; j < n.length; j = j + 1){
+			console.log(n[j]);
 		}*/
-		
-		/*var x = prompt("первое число");
-		var y = prompt("второе число");
+//unshift -добавляет в начало массива
+//continey -прерывание счетчика
+		//var users = Array("Антон", "Вера", "Коля");
+		/*var users = ["Антон", "Вера", "Коля", "Дима", "Даша"];
+		var b = 0;
+		var n = [ 0, 1, 2, 3, 0];
+		for(var i = 0; i < 6; i = i + 1){
+			if(n[i] == 0){
+				b = b+1;
+			}
+		}
+		console.log(b +" количество нулей");*/
+	/*var i = 1;
+		while(i < 5){
+			console.log(users[i - 1]);
+			i = i + 1;
+		}*/
+		/*var i = 0;
+		do{
+			console.log(users[i]);
+			i = i + 1;
+		}
+		while(i< 4);
+		*/
+		//console.log(users[1]);
 
-		x = Number(x);
-		y = Number(y);
-
-		console.log((x + y)/2); */
-		if(confirm("запросить данные у пользователя?"))
-			console.log("вы выбрали " +prompt("введите число")+" яблок");
+		while(true){
+			var i = Number(prompt());
+			if(i == 0){
+				break;
+			}
+			n.push(i);	
+		};
+		var j = 0;
+		while(j < n.length){
+			console.log(n[j]);
+			j = j + 1;
+		};
 	</script>
 
 </body>
