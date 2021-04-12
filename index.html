@@ -6,7 +6,7 @@
 </head>
 <body>
 	<script type="text/javascript">
-		var n = [];
+		//var n = [];
 		//проверяет равенство элемента нулю, после того, как пользователь ввел ноль, заносит все эл-ты в массив
 		/*for(;true;){
 			var i = Number(prompt());
@@ -48,7 +48,7 @@
 		*/
 		//console.log(users[1]);
 
-		while(true){
+		/*while(true){
 			var i = Number(prompt());
 			if(i == 0){
 				break;
@@ -59,7 +59,99 @@
 		while(j < n.length){
 			console.log(n[j]);
 			j = j + 1;
+		};*/
+		//калькулятор
+		var x = [];
+		function writeArray(y){
+			for(var i = 0; i < 2; i = i + 1){
+				y.push(Number(prompt()));
+			}
+		}
+
+		writeArray(x)
+		var char = prompt("Введите действие");
+		function f(m, n){
+			if(n == "+"){
+				console.log(m[0] + m[1]);
+			}
+			
+			if(n == "/"){
+				if(x[1] == 0){
+					console.log("на ноль не делится");
+				}
+				else{
+					console.log(m[0] / m[1]);
+				}
+			}
+		} 
+
+		f(x, char);
+//return - вернуть значение из функции в переменную
+		
+		/*for(var q = 0; q >= 0; q = q +1){
+			var c = Number(prompt());
+			if(c == 0){
+				break;
+			}
+			n.push(c)
 		};
+		for(var r = 0; r >= 0; r = r +1){
+			var y = Number(prompt());
+			if(y == 0){
+				break;
+			}
+			n.push(h);
+		};
+		for(var u = 0; u >= 0; u = u +1){
+			var g = prompt();
+			if(g == 0){
+				break;
+			}
+			n.push(a)
+		};
+		for(var j = 0; j < n.length; j = j + 1){
+			if(a == "*"){
+				console.log(b[c] * [h(y)])
+			}
+		};*/
+
+
+/* именая функция 
+	nameF(2)
+	function nameF(x){
+		console.log(x);
+	}*/
+	
+/* анонимная функция
+	var f = function(){
+
+	}
+	f();*/
+/*стрелочная функция
+	var f = () =>{
+
+	}*/
+
+	/*var mass = [1, 2, 3];
+	var mass1 = [23, 34, 56];
+
+	function writeArray(m){
+		for(var i = 0; i < m.length; i = i + 1){
+			console.log(m[i]);
+		};
+	}
+
+	function readArray(m, n){
+		var i = 0;
+		while(i < n){
+			m.push(prompt("Введите элемент массива"));
+			i = i + 1;
+		}
+	}
+	var g = Number(prompt("Введите длину массива"));
+	readArray(mass1, g);
+	writeArray(mass1);*/
+
 	</script>
 
 </body>

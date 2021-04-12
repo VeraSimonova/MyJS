@@ -8,21 +8,40 @@
 	<script type="text/javascript">
 		var a = [];
 		var flag = 0;
-		
-		for(;true;){
-			var b = Number(prompt());
-			if(b == 0){
-				break;
-			}
-			a.push(b);
-		};
-
-		for(var d = 0; d < a.length; d = d+1){
-			if(Number.isInteger(a[d])){
+		//Именная функция
+		function writeArray(n){
+			for(;true;){
+				var n = Number(prompt());
+				if(n == 0){
+					break;
+				}
+				a.push(n);
+			};
+		}	
+		writeArray(a);
+		//анонимная функция
+		var k = function(m){
+			for(var d = 0; d < m.length; d = d + 1){
+				if(Number.isInteger(a[d])){
 				flag = flag + 1 ;
 			}
-		};
-		console.log(flag + " целых чисел") 
+		}
+			console.log(flag + " целых чисел"); 
+		}
+		k(a);
+		//стрелочная функция
+
+		var n = (m) =>{
+			for(var i = 0; i < m.length; i = i + 1){
+				console.log(m[i]);
+			}	
+		}
+		n(a);
+
+
+
+		
+		
 	</script>
 
 </body>
