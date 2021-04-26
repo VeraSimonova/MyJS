@@ -1,0 +1,54 @@
+.windows{
+	width: 50%;
+	height: 150px;
+	margin: 0 auto;
+	background-image: url(../fon.jpg);
+}
+.windows h1{
+	text-align: center;
+}
+.windows form{
+	display: flex;
+	margin: 5px;
+}
+.windows form button{
+	margin: 0 auto;
+}
+.tabs_wrap{
+	width: 50%;
+	margin: 0 auto;
+	background-color: rgba(123, 104, 238, 0.7); 
+}
+.tabs_links ul{
+	display: flex;
+	list-style: none;
+}
+.tabs_links li{
+	padding: 5px;
+}
+.tabs_links a{
+	padding: 5px;
+	display: block;
+	border: 1px solid #FFC0CB;
+}
+.tabs_links li.active a, .tabs_links li a:hover{
+	background-color: #FFC0CB;
+}
+.form1{
+	padding: 5px;
+	margin: 10px;
+}
+.form1 label{
+	padding: 5px;
+	margin: 10px;
+}
+.form1 input{
+	padding: 5px;
+	margin: 10px;
+}
+.block{
+	display: none;
+}
+.block.active{
+	display: block;
+}
