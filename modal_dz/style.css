@@ -1,0 +1,19 @@
+.modal_wrap{
+	display: none;
+	position: fixed;
+	top: 0;
+	width: 300px;
+	background-color: rgba(64,224,208, 0.5);
+	left: 50%;
+	margin-left: -150px;
+	height: 200px;
+}
+.show{
+	display: block;
+}
+.close{
+ 	display: block;
+ 	position: absolute;
+ 	right: 0;
+ 	top: 0;
+}

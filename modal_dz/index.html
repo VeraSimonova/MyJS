@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modal</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<!--
+	<div class="modal_wrap">
+		<button class="close">x</button>
+		<div class="modal_content">
+			содержимое модали
+		</div>
+	</div>
+-->	<template id="modal1">
+		<h1>модаль 1</h1>
+	</template>
+
+	<template id="modal2">
+		<h1>модаль 2</h1>
+	</template>
+
+	<button class="modal1">modal1</button>
+	<button class="modal2">modal2</button>
+
+<script src="script.js"></script>
+<script >
+	init("modal1", "modal1" );
+	init("modal2", "modal2" );
+</script>
+</body>
+</html>
