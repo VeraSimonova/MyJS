@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+	<meta charset="utf-8">
+	<script src="jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<p>text</p>
+	<ul>
+		<li>
+			<span>Мониторы</span>
+			<ul class="active">
+				<li>LG</li>
+				<li>samsung</li>
+			</ul>
+		</li>
+		<li>
+			<span>Мышки</span>
+			<ul>
+				<li>logitech</li>
+				<li>jenius</li>
+				<li>okclick</li>
+			</ul>
+		</li>
+		<li>
+			<span>Клавиатуры</span>
+			<ul>
+				<li>logitech</li>
+				<li>jenius</li>
+			</ul>
+		</li>
+	</ul>
+	<style>
+		ul{
+			padding: 0px;
+			margin: 0;
+			list-style: none;
+			width: 150px;
+		}
+		span{
+			border: 1px solid #000;
+			padding: 5px 10px;
+			display: block;
+			box-sizing: border-box;
+			cursor: pointer;
+		}
+		span:hover{
+			background-color: #0f0;
+		}
+		ul ul{
+			border-left: 1px solid #000;
+			border-right: 1px solid #000;
+			box-sizing: border-box;
+			display: none;
+		}
+		ul ul li{
+			padding: 3px 10px;
+		}
+		.active{
+			display: block;
+		}
+		/*li.active span{
+			background-color: #0f0;
+		}*/
+	</style>
+	<script>
+
+		jQuery(document).ready(function(){
+			jQuery("span").on('click', function(){
+
+				if (jQuery(this).siblings().hasClass("active")) {
+					jQuery(this).siblings().removeClass("active");
+				}
+				else{
+					jQuery(this).siblings().addClass("active");
+				}
+				
+			});
+		})
+		
+	</script>
+</body>
+</html>
