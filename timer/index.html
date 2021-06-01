@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>document</title>
+	<meta charset="utf-8">
+	<style>
+		.wrap{
+			width: 700px;
+			height: 700px;
+			background-image: url(fon.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin: 0 auto;
+			position: relative;
+		}
+		.content h1{
+			text-align: center;
+			font-size: 30px;
+			text-transform: uppercase;
+			color: 	#d79a77;
+			position: absolute;
+			right: 0;
+			left: 0;
+			top: 150px;
+		}
+		.h{
+			text-align: center;
+			position: relative;
+			top: 35%;
+			font-size: 35px;
+			text-transform: uppercase;
+			color: 	#82ac9a;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="content">
+			<h1>До конца акции осталось</h1>
+		</div>
+		<p class="h" id="timer1"><p>
+	</div>
+
+	<script>
+		class Timer{
+			FinishTime;
+			init(FinishTime){
+				setInterval(function time(){
+					let finish = new Date(FinishTime).getTime();
+					let timeNow = new Date().getTime();
+
+					let distance = finish - timeNow;
+					let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+					let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+					let min = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+					let sec = Math.floor((distance % (1000 * 60)) / 1000);
+
+					document.getElementById("timer1").innerHTML = (days + "д " + hours + "ч " + min + "м " + sec + "с ");
+					if (distance < 0) {
+						clearInterval(time);
+						document.getElementById("timer1").innerHTML = "Акция завершена"
+					}
+				}, 1000)
+			} 
+		}
+		let timer1 = new Timer();
+		timer1.init("Jun 10, 2021, 13:17:00");
+
+
+	</script>
+</body>
+</html>
